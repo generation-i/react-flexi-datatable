@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Lightweight React DataTable with search, filtering, sorting, pagination, column toggle, CSV export and theming",
   "license": "MIT",
-  "author": "",
+  "author": "generation-i",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/generation-i/react-flexi-datatable.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/generation-i/react-flexi-datatable#readme",
+  "bugs": {
+    "url": "https://github.com/generation-i/react-flexi-datatable/issues"
+  },
   "main": "dist/flexi-datatable.umd.cjs",
   "module": "dist/flexi-datatable.js",
   "type": "module",
@@ -36,6 +39,9 @@
     "filtering",
     "csv-export"
   ],
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
@@ -66,7 +72,6 @@
     "globals": "^17.4.0",
     "jsdom": "^26.1.0",
     "prettier": "^3.5.3",
-    "prop-types": "^15.8.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "vite": "^8.0.0",
