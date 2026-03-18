@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Lightweight React DataTable with search, filtering, sorting, pagination, column toggle, CSV export and theming",
   "license": "MIT",
-  "author": "generation-i",
+  "author": "saravan",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/generation-i/react-flexi-datatable.git"
