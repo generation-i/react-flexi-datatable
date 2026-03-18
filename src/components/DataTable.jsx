@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import useTable from "../hooks/useTable";
 import useColumnDrag from "../hooks/useColumnDrag";
@@ -39,11 +39,9 @@ const DataTable = ({
     setVisibleColumns,
   );
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [rowsPerPage, data]);
-
-  const startIndex = (currentPage - 1) * rowsPerPage;
+  const totalPages = Math.max(1, Math.ceil(filteredData.length / rowsPerPage));
+  const safePage = Math.min(currentPage, totalPages);
+  const startIndex = (safePage - 1) * rowsPerPage;
   const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPage);
 
   const orderedColumns = columns
@@ -91,7 +89,8 @@ const DataTable = ({
   const handleRowsChange = (e) => {
     const value = Number(e.target.value);
     setRowsPerPage(value);
-    if (onPageChange) onPageChange({ page: currentPage, rowsPerPage: value });
+    setCurrentPage(1);
+    if (onPageChange) onPageChange({ page: 1, rowsPerPage: value });
   };
 
   const handlePageChange = (newPage) => {
@@ -216,7 +215,7 @@ const DataTable = ({
         <Pagination
           total={filteredData.length}
           rowsPerPage={rowsPerPage}
-          currentPage={currentPage}
+          currentPage={safePage}
           onPageChange={handlePageChange}
           customTheme={customTheme}
         />
