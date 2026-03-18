@@ -1,0 +1,75 @@
+{
+  "name": "flexi-datatable",
+  "version": "1.0.0",
+  "description": "Lightweight React DataTable with search, filtering, sorting, pagination, column toggle, CSV export and theming",
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "main": "dist/flexi-datatable.umd.cjs",
+  "module": "dist/flexi-datatable.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/flexi-datatable.js",
+      "require": "./dist/flexi-datatable.umd.cjs"
+    },
+    "./style.css": "./dist/flexi-datatable.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "datatable",
+    "table",
+    "react-table",
+    "grid",
+    "pagination",
+    "sorting",
+    "filtering",
+    "csv-export"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run lint && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@eslint/js": "^9.39.4",
+    "@rolldown/plugin-babel": "^0.2.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.5.3",
+    "prop-types": "^15.8.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "vite": "^8.0.0",
+    "vitest": "^3.2.1"
+  }
+}

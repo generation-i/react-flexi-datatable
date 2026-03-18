@@ -1,0 +1,257 @@
+/* =========================
+   Container
+========================= */
+
+.dt-container {
+  --dt-bg: white;
+  --dt-text: #333;
+  --dt-border: #ddd;
+  --dt-header-bg: #f5f5f5;
+  --dt-row-bg: white;
+  --dt-row-hover: #f9f9f9;
+  --dt-button-bg: #f5f5f5;
+  --dt-button-text: #333;
+  --dt-input-bg: white;
+
+  background: var(--dt-bg);
+  color: var(--dt-text);
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+
+/* =========================
+   Table
+========================= */
+
+.table-wrapper{
+  overflow-x:auto;
+}
+
+.dt-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* header */
+
+.dt-container th {
+  background: var(--dt-header-bg) !important;
+  color: var(--dt-header-text, var(--dt-text)) !important;
+  border: 1px solid var(--dt-border);
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+/* body */
+
+.dt-container td {
+  background: var(--dt-row-bg);
+  color: var(--dt-text);
+  border: 1px solid var(--dt-border);
+  padding: 8px;
+}
+
+.dt-container tr:hover{
+  background: var(--dt-row-hover);
+}
+
+
+/* =========================
+   Toolbar
+========================= */
+
+.table-toolbar{
+  display:flex;
+  gap:10px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+.dt-container input,
+.dt-container select{
+
+  background: var(--dt-input-bg);
+  color: var(--dt-text);
+  border:1px solid var(--dt-border);
+  padding:6px;
+
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.dt-container button{
+
+  background: var(--dt-button-bg);
+  color: var(--dt-button-text);
+  border:1px solid var(--dt-border);
+  padding:6px 12px;
+  cursor:pointer;
+
+}
+
+.dt-container button:hover{
+  opacity:0.9;
+}
+
+
+/* =========================
+   Pagination
+========================= */
+
+.dt-pagination{
+  display:flex;
+  gap:6px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+.dt-pagination button{
+  padding:6px 10px;
+  border:1px solid var(--dt-border);
+  background: var(--dt-row-bg);
+  color: var(--dt-text);
+  cursor:pointer;
+}
+
+.dt-pagination button:hover{
+  background: var(--dt-row-hover);
+}
+
+.dt-pagination .active-page{
+  background: var(--dt-pagination-active-bg);
+  color: var(--dt-pagination-active-text);
+}
+
+
+/* =========================
+   Column Toggle Dropdown
+========================= */
+
+.column-toggle{
+  position:relative;
+  display:inline-block;
+}
+
+.column-btn{
+  padding:6px 10px;
+  cursor:pointer;
+}
+
+.column-dropdown{
+
+  position:absolute;
+  background:var(--dt-row-bg);
+  color:var(--dt-text);
+  border:1px solid var(--dt-border);
+  padding:10px;
+  min-width:160px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  z-index:100;
+
+}
+
+.column-dropdown label{
+  display:block;
+  margin-bottom:5px;
+  cursor:pointer;
+  text-align: left;
+}
+
+
+/* =========================
+   Themes
+========================= */
+
+/* Default */
+
+.dt-theme-default{
+
+  --dt-bg:white;
+  --dt-text:#333;
+  --dt-border:#ddd;
+  --dt-header-bg:#f5f5f5;
+  --dt-row-bg:white;
+  --dt-row-hover:#f9f9f9;
+   --dt-pagination-active-bg:#007bff;
+  --dt-pagination-active-text:white;
+
+}
+
+
+/* Dark */
+
+.dt-theme-dark{
+
+  --dt-bg:#1e1e1e;
+  --dt-text:#ffffff;
+  --dt-border:#444;
+  --dt-header-bg:#2b2b2b;
+  --dt-row-bg:#1e1e1e;
+  --dt-row-hover:#2a2a2a;
+  --dt-button-bg:#444;
+  --dt-button-text:white;
+  --dt-input-bg:#2a2a2a;
+  --dt-pagination-active-bg:#444;
+  --dt-pagination-active-text:white;
+}
+
+
+/* Blue */
+
+.dt-theme-blue{
+
+  --dt-bg:#f0f6ff;
+  --dt-text:#003366;
+  --dt-border:#cce0ff;
+
+  --dt-header-bg:#007bff;
+  --dt-header-text:white;
+
+  --dt-row-bg:white;
+  --dt-row-hover:#e6f0ff;
+
+  --dt-button-bg:#007bff;
+  --dt-button-text:white;
+
+  --dt-pagination-active-bg:#007bff;
+  --dt-pagination-active-text:white;
+}
+
+/* Minimal */
+
+.dt-theme-minimal{
+
+  --dt-bg:white;
+  --dt-text:#333;
+  --dt-border:transparent;
+  --dt-header-bg:transparent;
+  --dt-row-bg:white;
+  --dt-row-hover:#f9f9f9;
+  --dt-button-bg:transparent;
+--dt-pagination-active-bg:#333;
+  --dt-pagination-active-text:white;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width:768px){
+
+  .dt-container table{
+    min-width:600px;
+  }
+
+}

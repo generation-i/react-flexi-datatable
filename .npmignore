@@ -1,0 +1,10 @@
+src/
+public/
+node_modules/
+index.html
+.prettierrc
+eslint.config.js
+vite.config.js
+*.test.*
+__tests__/
+.gitignore
